@@ -9,7 +9,6 @@ import { DashboardComponent } from './modules/dashboard/dashboard.component';
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent
   ],
   imports: [
     BrowserModule,

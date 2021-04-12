@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { take } from 'rxjs/operators';
 import { RegistrationService } from 'src/app/services/registration/registration.service';
-import {User} from './../../shared/user';
+import {User} from './../../shared/models/user/user';
 
 @Component({
   selector: 'app-registration',
@@ -40,6 +41,9 @@ export class RegistrationComponent implements OnInit {
 
   registrate(user: User): void {
     this.registrationService.registrate(user)
+    .pipe(
+      take(1)
+    )
     .subscribe(
       // _response
       (response: any) => this.onSuccessRegistration(),
@@ -49,6 +53,7 @@ export class RegistrationComponent implements OnInit {
   }
 
   onSuccessRegistration(): void {
+    this.registrationForm.reset();
     this.router.navigate(['dashboard']);
   }
 
