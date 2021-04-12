@@ -6,22 +6,34 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Challenge:
+Você é o responsável por criar uma App de Planning Poker Angular.
+Requisitos:
+ - Uma página inicial com um formulário para registro do nome do usuário;
+    - Na página de registro de usuário, o usuário deverá informar se é o owner da sala de Planning Poker criada;
 
-## Running end-to-end tests
+ - Ao registrar o usuário a página deve redirecionar para o dashboard;
+ - Um dashboard com um container para exibição das cartas e um painel com os usuários registrados;
+ - Ao clicar na carta ela deverá permanecer destacada e o voto deverá ser computado;
+ - Quando todos os votos forem computados, exibir na lista de usuários qual usuário votou e o valor do voto;
+ - Deverá existir um botão para zerar os votos;
+ - Deverá existir um botão para sair da sala.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+Os requisitos não funcionais são:
+ -  Utilizar a versão 9 ou superior do Angular e o Sass como pré-processador;
+ -  O campo de nome de usuário não deverá permitir valor em branco utilizando ReactiveForms;
+ -  Os itens da página: formulário, cartas, painel; deverão ser criados como componentes
+Angular;
+ -  Aplique “Lazy Load” nas rotas de navegação;
+ -  Usuários e votos devem ser mocks;
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Observações importantes:
+ -  Todo o código deverá ser publicado em um repositório público do GitHub;
+ -  Fique atento a ter um código que utilize padrões de desenvolvimento e boas práticas;
+ -  Extra Challenge (não obrigatório): utilizar um servidor back-end para computar os votos.

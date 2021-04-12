@@ -1,0 +1,13 @@
+Para a sessão (sala de planning poker)
+
+Duas ideias para o entrada de usuário padrão (não Owner):
+ 1ª O usuário Owner cria a sala e disponibiliza a link para os outros usuários:
+    - o link é da seguinte maneira dashboard/:tokenSession
+    - o usuário cai primeiro na tela de registro para registrar o nome;
+    - Depois do registro o usuário é encaminha para a sala de Planning Poker
+        - Utilizar o token para encaminhar para a sala/sessão correta
+
+ 2ª O usuário padrão entra sem ter recebido o link:
+    - Após passar pela tela de registro (não se registrar como Owner), 
+o usuário cai em uma tela com as sessões ativas no momento (sessão ativa apenas quando o owner estiver na sala)
+    - o usuário escolhe uma sala e espera aprovação do owner para entrar.
