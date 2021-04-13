@@ -12,10 +12,14 @@ Duas ideias para o entrada de usuário padrão (não Owner):
 o usuário cai em uma tela com as sessões ativas no momento (sessão ativa apenas quando o owner estiver na sala)
     - o usuário escolhe uma sala e espera aprovação do owner para entrar.
 
-dashboard
+DASHBOARD
 
 Para o botão de sair apagar dado do local storage
 - Para o futuro:
-    perguntar se quer que salve o usuário (não salva como owner) -> salva nome do usuário
-    criar tela de "criar sala" -> usuário setado para Owner da sala; (funcionalidade apenas quando tiver "deseja salvar dados?")
+    - perguntar se quer que salve o usuário (não salva como owner) -> salva nome do usuário
+    - criar tela de "criar sala" -> usuário setado para Owner da sala; (funcionalidade apenas quando tiver "deseja salvar dados?")
     
+Para o contador de votos
+-> Dentro do dashboard tem um voting panel 
+-> o voting-panel emit individualmente cada voto para o dashboard
+-> o dashboard retorna o valor soma de todos os voting-panel

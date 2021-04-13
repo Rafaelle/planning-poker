@@ -1,8 +1,4 @@
-export class User {
-    userName = '';
-    owner = false;
-
-    public constructor(init?: Partial<User>) {
-        Object.assign(this, init);
-    }
+export interface User {
+    userName: string;
+    owner: boolean;
 }

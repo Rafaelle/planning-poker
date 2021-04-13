@@ -25,7 +25,7 @@ export class AuthService {
     }
     const userSaved = localStorage.getItem('user');
     if (userSaved){
-      this.currentUser = new User(JSON.parse(userSaved));
+      this.currentUser = JSON.parse(userSaved);
       return this.currentUser;
     }
     return null;

@@ -23,19 +23,19 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void{
     // this.user = new User();
-    this.createForm(new User());
+    this.createForm();
   }
 
-  createForm(user: User): void {
+  createForm(): void {
 
     this.loginForm = this.formBuilder.group({
-      userName: [user.userName, [Validators.required, Validators.minLength(3)]],
-      owner: [user.owner],
+      userName: ['', [Validators.required, Validators.minLength(3)]],
+      owner: [false],
     });
   }
 
   enter(): void {
-    this.login(new User(this.loginForm.value));
+    this.login(this.loginForm.value);
   }
 
   login(user: User): void {
