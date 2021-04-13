@@ -10,8 +10,8 @@ const routes: Routes = [
     mas é mais fácil lembrar do nome login)*/
     path: 'login',
     loadChildren: () =>
-      import('./modules/registration/registration.module')
-        .then(m => m.RegistrationModule)
+      import('./modules/login/login.module')
+        .then(m => m.LoginModule)
   }, {
     path: 'dashboard',
     loadChildren: () =>

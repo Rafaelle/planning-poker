@@ -1,6 +1,6 @@
 import { User } from '../user/user';
 
-export interface RegistrationResponse {
+export interface LoginResponse {
     user: User;
     sessionToken: string;
 }

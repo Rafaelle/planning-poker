@@ -1,5 +1,5 @@
 <div class="container pt-5" >
-    <form [formGroup]='registrationForm' (ngSubmit)="enter()" >
+    <form [formGroup]='loginForm' (ngSubmit)="enter()" >
         <div class="form-group">
             <label for="userName">Digite seu usuário</label>
             <input   class="form-control" type="text" name="userName" formControlName="userName">
@@ -10,7 +10,7 @@
             <input class=" form-control" type="checkbox" name="owner" formControlName="owner">        
         </div>
         <div>
-            <button [disabled]="!registrationForm.valid" type="submit" class="btn btn-primary">Entrar</button>
+            <button [disabled]="!loginForm.valid" type="submit" class="btn btn-primary">Entrar</button>
             <!--<button class="btn btn-secondary" type="reset" (click)="onReset()">Reset</button>-->
         </div>
     </form>

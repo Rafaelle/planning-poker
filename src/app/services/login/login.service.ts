@@ -1,20 +1,20 @@
 import { Injectable } from '@angular/core';
 import {Observable, of, throwError } from 'rxjs';
 import { tap } from 'rxjs/operators';
-import { RegistrationResponse } from 'src/app/shared/models/registrationResponse/registrationResponse.interface';
+import { LoginResponse } from 'src/app/shared/models/login-response/login-response.interface';
 import { User } from 'src/app/shared/models/user/user';
 import { AuthService } from '../auth/auth.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class RegistrationService {
+export class LoginService {
 
   constructor(
     private authService: AuthService,
   ) { }
 
-  registrate(user: User): Observable<RegistrationResponse> | any {
+  login(user: User): Observable<LoginResponse> | any {
     // chamada na API
     // return this.http.post(this.API_URL, user, this.httpOptions);
     // ou salvar a sala(sessão)
