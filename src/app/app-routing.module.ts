@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NotFoundComponent } from './components/not-found/not-found.component';
-import { RegisteredGuard } from './shared/guards/registered.guard';
+import { LoggedGuard } from './shared/guards/logged.guard';
 
 const routes: Routes = [
   {
@@ -17,7 +17,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('./modules/dashboard/dashboard.module')
         .then(m => m.DashboardModule),
-    canActivate: [RegisteredGuard]
+    canActivate: [LoggedGuard]
   }, {
     path: '',
     redirectTo: 'login',

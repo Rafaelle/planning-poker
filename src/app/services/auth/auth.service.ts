@@ -1,14 +1,17 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { User } from 'src/app/shared/models/user/user';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  currentUser!: User;
-  sessionToken!: string;
+  currentUser!: User | null;
+  sessionToken!: string | null;
 
-  constructor() {
+  constructor(
+    private router: Router,
+  ) {
   }
 
   setUser(user: User): void {
@@ -45,7 +48,14 @@ export class AuthService {
     return null;
   }
 
-  registered(): boolean {
+  isLogged(): boolean {
     return this.getUser() ? true : false;
+  }
+
+  logout(): void {
+    this.currentUser = null;
+    this.sessionToken = null;
+    localStorage.clear();
+    this.router.navigate(['login']);
   }
 }
