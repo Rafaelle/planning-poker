@@ -23,3 +23,7 @@ Para o contador de votos
 -> Dentro do dashboard tem um voting panel 
 -> o voting-panel emit individualmente cada voto para o dashboard
 -> o dashboard retorna o valor soma de todos os voting-panel
+
+
+VOTAÇÃO
+    - abodagens:

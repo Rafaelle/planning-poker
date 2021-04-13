@@ -52,4 +52,12 @@ export class VotesService{
     }
     return false;
   }
+
+  getTotal(): number{
+    const total = this.votes.reduce((sum, item) => {
+      return sum + item.vote;
+    }, 0);
+
+    return total;
+  }
 }

@@ -1,6 +1,8 @@
 <div class="container">
-    <button>Mostrar votação</button>
-    <h2 class="title">Total da votação: {{cardSelected}}</h2>
-    <p>votação: {{vote}}</p>
-    <app-card (cardSelected)='cardClicked ($event)'*ngFor="let item of listVotes; let i=index" [value]='item'></app-card>
+    <app-card 
+        [disabled]='!cardDisabled' 
+        (cardSelected)='cardClicked ($event)' 
+        *ngFor="let item of listVotes; let i=index"
+        [value]='item'>
+    </app-card>
 </div>
