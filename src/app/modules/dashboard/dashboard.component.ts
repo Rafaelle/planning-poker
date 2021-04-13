@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/services/auth/auth.service';
 import { VotesService } from 'src/app/services/votes/votes.service';
 import { VotingSessionService } from 'src/app/services/votes/voting-session/voting-session.service';
+import { User } from 'src/app/shared/models/user/user';
 import { Vote } from 'src/app/shared/models/vote/vote';
 
 @Component({
@@ -9,15 +11,19 @@ import { Vote } from 'src/app/shared/models/vote/vote';
   styleUrls: ['./dashboard.component.sass']
 })
 export class DashboardComponent implements OnInit {
+
   votes!: Array<Vote>;
   startVotingDisable = false;
   showVotes = false;
   total = 0;
+  owner = false;
+  user !: User;
 
 
   constructor(
   private votesService: VotesService,
-  private votingSessionService: VotingSessionService  ) { }
+  private votingSessionService: VotingSessionService,
+  private authService: AuthService  ) { }
 
   ngOnInit(): void {
     this.votingSessionService.alreadyVoted()
@@ -27,7 +33,8 @@ export class DashboardComponent implements OnInit {
       // _error
       (error: any) => this.onErrorVote(error)
     );
-
+    
+    this.owner = (this.authService.getUser()).owner;
   }
 
 

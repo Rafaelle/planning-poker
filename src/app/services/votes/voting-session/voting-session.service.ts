@@ -13,6 +13,8 @@ export class VotingSessionService {
 
   start = new Subject<boolean>();
 
+  clearVotes = new Subject<boolean>();
+
   alreadyVoted(): Observable<boolean> {
     return this.voting.asObservable();
   }
@@ -21,12 +23,17 @@ export class VotingSessionService {
     return this.start.asObservable();
   }
 
+  clearAllVotes(): Observable<boolean> {
+    this.clearVotes.next(true);
+    return this.clearVotes.asObservable();
+  }
 
   vote(): void{
     localStorage.setItem('voted', 'true');
     this.voted = true;
     this.voting.next(this.voted);
     this.start.next(false);
+    this.clearVotes.next(true);
   }
 
   notVoted(): void {
@@ -34,7 +41,9 @@ export class VotingSessionService {
     this.voted = false;
     this.voting.next(this.voted);
     this.start.next(true);
+    this.clearVotes.next(false);
   }
+
 
 
 
