@@ -1,0 +1,52 @@
+@import './../../../../../sass/colors'
+@import './../../../../../sass/display'
+
+.team-panel-component
+    position: fixed
+    bottom: 0
+    left: 0
+    width: 100%
+    background-color: $gray-light
+    text-align: center
+    padding: 1em
+    display: flex
+    flex-direction: row
+    flex-wrap: nowrap
+    justify-content: space-between
+
+.card-team-panel
+    background-color: $white
+    flex: 1
+    margin: 1em
+    padding: 1em
+    display: flex
+    flex-direction: column
+    text-align: start
+
+.votes-container
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+.card-title
+    font-size: 1.2em
+
+@media screen and (max-width: $screen-md-min) 
+    .team-panel-component
+        flex-direction: column
+        padding: 2em 0.5em 0.5em
+
+    .card-team-panel
+        margin: 0.25em
+        padding: 0.5em
+
+
+@media screen and (min-width: $screen-md-min) 
+    .card-title
+        font-size: 1.5em
+    .votes-container
+        flex-direction: row
+        flex-wrap: wrap
+
+
