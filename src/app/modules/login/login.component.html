@@ -2,7 +2,7 @@
     <div class="form-component">
         <h3>CADASTRO</h3>
         <form class="login-form mb-4" [formGroup]='loginForm' (ngSubmit)="enter()">
-            <div class="form-group ">
+            <div class="form-group">
                 <label for="usuario">Digite seu usuário</label>
                 <input class="form-control" type="text" name="userName" formControlName="userName">
             </div>
@@ -13,7 +13,7 @@
             <div class="button-group">
                 <button aria-label="Entrar" class="btn btn-success btn-lg btn-block"
                     ng-class="{loginForm.valid: 'disabled'}" [disabled]="!loginForm.valid" type="submit">Entrar</button>
-                <button aria-label="Limpar dados" class="btn btn-secondary btn-lg btn-block" type="reset"
+                <button aria-label="Limpar dados" class="btn btn-outline-dark btn-lg btn-block" type="reset"
                     (click)="onReset()">Limpar dados</button>
             </div>
         </form>
