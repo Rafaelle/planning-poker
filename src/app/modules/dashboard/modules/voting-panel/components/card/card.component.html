@@ -1,1 +1,3 @@
-<button [disabled]='disabled' (click)='onSelected()'>{{value}}</button>
+<div class="card">
+    <button ng-class="{selected: 'selected'}" [disabled]='disabled' (click)='onSelected()'>{{value}}</button>
+</div>

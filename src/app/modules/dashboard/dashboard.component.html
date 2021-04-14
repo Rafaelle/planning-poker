@@ -1,10 +1,10 @@
 <app-header></app-header>
-<div class="container">
-    <div>
+<div class="dashboard-content">
+    <div class="container dashboard-item">
         <button *ngIf='owner' [disabled]='startVotingDisable' (click)='onStartVoting()'>Iniciar Votação</button>
         <button *ngIf='owner' (click)='clear()'>Zerar pontuação</button>
         <h3 *ngIf='showVotes'>Pontuação: {{total}}</h3>
-        <app-voting-panel ></app-voting-panel>
+        <app-voting-panel></app-voting-panel>
     </div>
-    <app-team-panel></app-team-panel>
+    <app-team-panel class="dashboard-item"></app-team-panel>
 </div>
