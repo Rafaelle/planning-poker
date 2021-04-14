@@ -60,6 +60,10 @@ export class LoginComponent implements OnInit {
     console.log('Algo deu errado');
   }
 
+  onReset(){
+    this.loginForm.reset();
+  }
+
 
 
 

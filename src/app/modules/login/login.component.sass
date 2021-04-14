@@ -1,6 +1,54 @@
-#owner 
-    display: flex
-    flex-direction: columns
-    flex-wrap: nowrap
+@import './../../../sass/colors'
+@import './../../../sass/display'
+
+.login-component
+  background-color: $clean
+  font-size: 16px
+  min-width: 300px
+  display: flex
+  flex-direction: column
+  padding: 0.5em
+  border-radius: 1rem
+
+.login-component h3
+  text-align: center
+
+.form-group
+  display: flex
+  flex-direction: column
+  align-content: center
+  justify-content: flex-start
+
+.form-control
+  border-radius: 5px
+  // /*
+  // text-align: left
+  // background: transparent
+  // display: flex
+  // flex-direction: column
+  // border-style: none
+  // border-bottom-style: dotted
+  // border-color: $clean-dark */
+
+#owner
+  flex-direction: row
+  flex-wrap: nowrap
+
+.form-check-input
+  position: relative
+  margin-left: 0
+  margin-right: 0.75em
+
+
+
+@media screen and (min-width: $screen-md-min) 
+  .login-component
+    min-width: 500px
+    font-size: 18px
+
+
+
+
+
 
 
