@@ -24,6 +24,39 @@ Para o contador de votos
 -> o voting-panel emit individualmente cada voto para o dashboard
 -> o dashboard retorna o valor soma de todos os voting-panel
 
+COMUNICAÇÃO EM TEMPO REAL
 
-VOTAÇÃO
-    - abodagens:
+usar o socket.io e express
+- QUAIS OS AVANÇOS:
+    Consegui criar um a comunicação em tempo real e cheguei a conseguir trocar menssagem do client com o server e vice-versa,
+    até mesmo com mais de uma aba aberta recebi a mensagem nas abas.
+-DIFICULDADES:
+    - No inicio não estava conseguindo visualizar a maneira de pegar os dados que eram trocados, mas comecei a entender a dinâmica
+    mas não tive tempo de implementar;
+
+-COMO SERIA UMA POSSIVEL SOLUÇÃO
+    - LOGIN
+        . Quando um usuário logar no site, o client emite uma mensagem e envia os dados de autenticação (usuario e se é onwer - inicialmente);
+        . o server ao receber atualiza a lista de usuários e envia para todos os usuários conectados (abas abertas) a lista com o nome dos usuários;
+    - VOTAÇÃO
+        . Para a votação segue o mesmo modelo de comunicação
+        . COMO CALCULAR?
+            - Uma alternativa é receber o voto de cada usuário conectado e quando a quantidade de votos fosse igual a 
+            quantidade de usuários conectados encerrar a votação e enviar para os clients o valor total
+                - PROGRAMATICAMENTE
+                    . não sei se é o jeito mais correto de fazer, mas pensando por cima uma solução rápida sem ter conhecimento da tecnologia, seria uma alternativa
+                    . não ocorreria de um usuário votar mais de uma vez porque o front garante que os cards de votação estão desabilitados assim que computa o voto;
+                    . usuaria variaveis para flag no servidor para avisar ao client sobre o final da votação
+
+
+INCOMPLETOS
+    - o botão de zerar não funciona como gostaria
+    - o style acabou ficando numa versão intermediaria entre o que consegui fazer por conta do tempo e o que eu gostaria de ter feito
+
+CONSIDERAÇÕES
+    - Ainda não sei todas as boas práticas de Angular, então posso ter organizado de uma maneira equivocada os arquivos ou uso de váriaveis e etc,
+    mas tentei seguir uma maneira lógica e a maneira que aprendi dentro do curso que fiz e de outras linguagens que costumo usar.
+    - Como eu não teria tempo suficiente para me dedicar apenas ao desafio, tentei começar fazendo todas as funcionalidades que conegui para depois 
+    estilizar todos os componentes e páginas (como pode ser visto nos commits do repositório)
+    - Trabalhar com Angular é novo para mim, precisei aprender muita coisa e relembrar tantas outras, 
+        e como não pude me dedicar integralmente ao desafio, tentei fazer o máximo que consegui, mas foi enriquecedor.
