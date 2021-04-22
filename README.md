@@ -11,7 +11,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
 
-Challenge:
+## Challenge:
 Você é o responsável por criar uma App de Planning Poker Angular.
 Requisitos:
  - Uma página inicial com um formulário para registro do nome do usuário;
@@ -37,3 +37,6 @@ Observações importantes:
  -  Todo o código deverá ser publicado em um repositório público do GitHub;
  -  Fique atento a ter um código que utilize padrões de desenvolvimento e boas práticas;
  -  Extra Challenge (não obrigatório): utilizar um servidor back-end para computar os votos.
+
+## Link da aplicação rodando
+https://initial-planning-poker.netlify.app/login
